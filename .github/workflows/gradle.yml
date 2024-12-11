@@ -18,6 +18,7 @@ on:
 permissions:
   contents: read
 
+
 jobs:
   build:
     strategy:
@@ -30,6 +31,8 @@ jobs:
     steps:
       - uses: actions/checkout@v3
 
+      - name: Ensure gradlew is executable
+        run: chmod +x gradlew
       - name: Set up Java
         uses: actions/setup-java@v3
         with:
@@ -48,3 +51,5 @@ jobs:
         uses: gradle/gradle-build-action@v2
         with:
           arguments: build
+
+
