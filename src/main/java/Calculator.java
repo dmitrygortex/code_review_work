@@ -27,10 +27,10 @@ public class Calculator {
     }
 
     public int solver() {
-        // (5 + 5) * (11 - 1) / 25 + ((5 + 5) * (11 - 1))!
+        // (5 + 5) * (11 - 1) / 25 + ((5 + 5) * (11 - 1)) + 1!
         int step1 = add(5, 5);
         int step2 = dif(11, 1);
         int step3 = times(step1, step2);
-        return div(step3, 25) + fact(step3);
+        return div(step3, 25) + fact(step3) + 1;
     }
 }
